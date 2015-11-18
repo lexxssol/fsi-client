@@ -1,0 +1,531 @@
+<wsdl:definitions xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:wsx="http://schemas.xmlsoap.org/ws/2004/09/mex" xmlns:wsap="http://schemas.xmlsoap.org/ws/2004/08/addressing/policy" xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:tns="http://tempuri.org/" xmlns:wsa10="http://www.w3.org/2005/08/addressing" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing" name="Orders" targetNamespace="http://tempuri.org/">
+<wsp:Policy wsu:Id="OrdersEndpointSoap11_policy">
+<wsp:ExactlyOne>
+<wsp:All>
+<sp:TransportBinding xmlns:sp="http://schemas.xmlsoap.org/ws/2005/07/securitypolicy">
+<wsp:Policy>
+<sp:TransportToken>
+<wsp:Policy>
+<sp:HttpsToken RequireClientCertificate="false"/>
+</wsp:Policy>
+</sp:TransportToken>
+<sp:AlgorithmSuite>
+<wsp:Policy>
+<sp:Basic256/>
+</wsp:Policy>
+</sp:AlgorithmSuite>
+<sp:Layout>
+<wsp:Policy>
+<sp:Strict/>
+</wsp:Policy>
+</sp:Layout>
+</wsp:Policy>
+</sp:TransportBinding>
+</wsp:All>
+</wsp:ExactlyOne>
+</wsp:Policy>
+<wsp:Policy wsu:Id="OrdersEndpoint_policy">
+<wsp:ExactlyOne>
+<wsp:All>
+<sp:TransportBinding xmlns:sp="http://schemas.xmlsoap.org/ws/2005/07/securitypolicy">
+<wsp:Policy>
+<sp:TransportToken>
+<wsp:Policy>
+<sp:HttpsToken RequireClientCertificate="false"/>
+</wsp:Policy>
+</sp:TransportToken>
+<sp:AlgorithmSuite>
+<wsp:Policy>
+<sp:Basic256/>
+</wsp:Policy>
+</sp:AlgorithmSuite>
+<sp:Layout>
+<wsp:Policy>
+<sp:Strict/>
+</wsp:Policy>
+</sp:Layout>
+</wsp:Policy>
+</sp:TransportBinding>
+<wsaw:UsingAddressing/>
+</wsp:All>
+</wsp:ExactlyOne>
+</wsp:Policy>
+<wsdl:types>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:tns="https://www.fsicatalog.com/services/orderprocessing/v4" elementFormDefault="qualified" targetNamespace="https://www.fsicatalog.com/services/orderprocessing/v4">
+<xs:element name="OrderRequest">
+<xs:complexType>
+<xs:sequence>
+<xs:element minOccurs="0" name="Order" nillable="true" type="tns:Request"/>
+</xs:sequence>
+</xs:complexType>
+</xs:element>
+<xs:complexType name="Request">
+<xs:sequence>
+<xs:element minOccurs="0" name="OwnerCode" nillable="true" type="xs:string"/>
+<xs:element minOccurs="0" name="OrderNumber" nillable="true" type="xs:string"/>
+<xs:element minOccurs="0" name="ShipAfterDate" nillable="true" type="xs:string"/>
+<xs:element minOccurs="0" name="Misc" nillable="true" type="xs:string"/>
+<xs:element minOccurs="0" name="ShippingCharge" type="xs:decimal"/>
+<xs:element minOccurs="0" name="HandlingCharge" type="xs:decimal"/>
+<xs:element minOccurs="0" name="TaxCharge" type="xs:decimal"/>
+<xs:element minOccurs="0" name="Email" nillable="true" type="xs:string"/>
+<xs:element minOccurs="0" name="PromotionCode" nillable="true" type="xs:string"/>
+<xs:element minOccurs="0" name="AuthenticationKey" nillable="true" type="xs:string"/>
+<xs:element minOccurs="0" name="IsGiftOrder" type="xs:boolean"/>
+<xs:element minOccurs="0" name="OrderMessages" nillable="true" type="tns:MessageCollection"/>
+<xs:element minOccurs="0" name="BillingAddress" nillable="true" type="tns:Address"/>
+<xs:element minOccurs="0" name="OrderPayment" nillable="true" type="tns:Payment"/>
+<xs:element minOccurs="0" name="OrderHolds" nillable="true" type="tns:OrderHoldCollection"/>
+<xs:element minOccurs="0" name="LineItems" nillable="true" type="tns:LineItemCollection"/>
+<xs:element minOccurs="0" name="UserDefinedInfo" nillable="true" type="tns:UserDefinedField"/>
+<xs:element minOccurs="0" name="AdditionalOrderInfo" nillable="true" type="tns:AdditionalOrderField"/>
+<xs:element minOccurs="0" name="ShippingAddress" nillable="true" type="tns:Address"/>
+<xs:element minOccurs="0" name="ShippingCode" type="tns:ShippingMethod"/>
+<xs:element minOccurs="0" name="ShipmentOption" nillable="true" type="tns:ShippingOption"/>
+<xs:element minOccurs="0" name="OrderDate" nillable="true" type="xs:string"/>
+<xs:element minOccurs="0" name="OrderType" nillable="true" type="xs:string"/>
+<xs:element minOccurs="0" name="OrderClass" nillable="true" type="xs:string"/>
+<xs:element minOccurs="0" name="TechnicalContacts" nillable="true" type="tns:TechnicalContactCollection"/>
+</xs:sequence>
+</xs:complexType>
+<xs:element name="Request" nillable="true" type="tns:Request"/>
+<xs:complexType name="MessageCollection">
+<xs:sequence>
+<xs:element minOccurs="0" maxOccurs="unbounded" name="OrderMessage" nillable="true" type="tns:OrderMessage"/>
+</xs:sequence>
+</xs:complexType>
+<xs:element name="MessageCollection" nillable="true" type="tns:MessageCollection"/>
+<xs:complexType name="OrderMessage">
+<xs:sequence>
+<xs:element minOccurs="0" name="Text" nillable="true" type="xs:string"/>
+<xs:element minOccurs="0" name="Type" type="tns:OrderMessageType"/>
+</xs:sequence>
+</xs:complexType>
+<xs:element name="OrderMessage" nillable="true" type="tns:OrderMessage"/>
+<xs:simpleType name="OrderMessageType">
+<xs:restriction base="xs:string">
+<xs:enumeration value="PUBLIC"/>
+<xs:enumeration value="PRIVATE"/>
+</xs:restriction>
+</xs:simpleType>
+<xs:element name="OrderMessageType" nillable="true" type="tns:OrderMessageType"/>
+<xs:complexType name="Address">
+<xs:sequence>
+<xs:element minOccurs="0" name="Name" nillable="true" type="xs:string"/>
+<xs:element minOccurs="0" name="Attention" nillable="true" type="xs:string"/>
+<xs:element minOccurs="0" name="Department" nillable="true" type="xs:string"/>
+<xs:element minOccurs="0" name="Address1" nillable="true" type="xs:string"/>
+<xs:element minOccurs="0" name="Address2" nillable="true" type="xs:string"/>
+<xs:element minOccurs="0" name="City" nillable="true" type="xs:string"/>
+<xs:element minOccurs="0" name="State" nillable="true" type="xs:string"/>
+<xs:element minOccurs="0" name="PostalCode" nillable="true" type="xs:string"/>
+<xs:element minOccurs="0" name="CountryCode" nillable="true" type="xs:string"/>
+<xs:element minOccurs="0" name="Phone" nillable="true" type="xs:string"/>
+</xs:sequence>
+</xs:complexType>
+<xs:element name="Address" nillable="true" type="tns:Address"/>
+<xs:complexType name="Payment">
+<xs:sequence>
+<xs:element minOccurs="0" name="Amount" type="xs:decimal"/>
+<xs:element minOccurs="0" name="ReferenceNumber" nillable="true" type="xs:string"/>
+<xs:element minOccurs="0" name="CreditCardNumber" nillable="true" type="xs:string"/>
+<xs:element minOccurs="0" name="ExpirationDate" nillable="true" type="xs:string"/>
+<xs:element minOccurs="0" name="Method" type="tns:PaymentMethod"/>
+</xs:sequence>
+</xs:complexType>
+<xs:element name="Payment" nillable="true" type="tns:Payment"/>
+<xs:simpleType name="PaymentMethod">
+<xs:restriction base="xs:string">
+<xs:enumeration value="None"/>
+<xs:enumeration value="Discover"/>
+<xs:enumeration value="DiscoverAuthorizeNet"/>
+<xs:enumeration value="Amex"/>
+<xs:enumeration value="AmexAuthorizeNet"/>
+<xs:enumeration value="Mastercard"/>
+<xs:enumeration value="MastercardAuthorizeNet"/>
+<xs:enumeration value="NoCharge"/>
+<xs:enumeration value="PreChargedCard"/>
+<xs:enumeration value="Visa"/>
+<xs:enumeration value="VisaAuthorizeNet"/>
+<xs:enumeration value="TermsNet10"/>
+<xs:enumeration value="TermsNet15"/>
+<xs:enumeration value="TermsNet20"/>
+<xs:enumeration value="TermsNet30"/>
+<xs:enumeration value="TermsNet45"/>
+<xs:enumeration value="TermsNet60"/>
+<xs:enumeration value="TermsNet90"/>
+<xs:enumeration value="TermsNet120"/>
+<xs:enumeration value="TermsNet180"/>
+<xs:enumeration value="GLCode"/>
+</xs:restriction>
+</xs:simpleType>
+<xs:element name="PaymentMethod" nillable="true" type="tns:PaymentMethod"/>
+<xs:complexType name="OrderHoldCollection">
+<xs:sequence>
+<xs:element minOccurs="0" maxOccurs="unbounded" name="OrderHold" nillable="true" type="tns:OrderHold"/>
+</xs:sequence>
+</xs:complexType>
+<xs:element name="OrderHoldCollection" nillable="true" type="tns:OrderHoldCollection"/>
+<xs:complexType name="OrderHold">
+<xs:sequence>
+<xs:element minOccurs="0" name="Reason" type="tns:OrderHoldReason"/>
+</xs:sequence>
+</xs:complexType>
+<xs:element name="OrderHold" nillable="true" type="tns:OrderHold"/>
+<xs:simpleType name="OrderHoldReason">
+<xs:restriction base="xs:string">
+<xs:enumeration value="NONE"/>
+<xs:enumeration value="TEST_ORDER"/>
+<xs:enumeration value="HOLD_FOR_PAYMENT"/>
+<xs:enumeration value="MISSING_EMAIL"/>
+<xs:enumeration value="WEB_ORDER_HOLD"/>
+</xs:restriction>
+</xs:simpleType>
+<xs:element name="OrderHoldReason" nillable="true" type="tns:OrderHoldReason"/>
+<xs:complexType name="LineItemCollection">
+<xs:sequence>
+<xs:element minOccurs="0" maxOccurs="unbounded" name="LineItem" nillable="true" type="tns:LineItem"/>
+</xs:sequence>
+</xs:complexType>
+<xs:element name="LineItemCollection" nillable="true" type="tns:LineItemCollection"/>
+<xs:complexType name="LineItem">
+<xs:sequence>
+<xs:element minOccurs="0" name="ItemNumber" nillable="true" type="xs:string"/>
+<xs:element minOccurs="0" name="Quantity" type="xs:int"/>
+<xs:element minOccurs="0" name="Price" type="xs:decimal"/>
+<xs:element minOccurs="0" name="Size" nillable="true" type="xs:string"/>
+<xs:element minOccurs="0" name="Color" nillable="true" type="xs:string"/>
+<xs:element minOccurs="0" name="LineID" nillable="true" type="xs:string"/>
+<xs:element minOccurs="0" name="LineUDF1" nillable="true" type="xs:string"/>
+<xs:element minOccurs="0" name="LineUDF2" nillable="true" type="xs:string"/>
+<xs:element minOccurs="0" name="LineUDF3" nillable="true" type="xs:string"/>
+<xs:element minOccurs="0" name="LineUDF4" nillable="true" type="xs:string"/>
+<xs:element minOccurs="0" name="LineUDF5" nillable="true" type="xs:string"/>
+</xs:sequence>
+</xs:complexType>
+<xs:element name="LineItem" nillable="true" type="tns:LineItem"/>
+<xs:complexType name="UserDefinedField">
+<xs:sequence>
+<xs:element minOccurs="0" name="UserDefined0" nillable="true" type="xs:string"/>
+<xs:element minOccurs="0" name="UserDefined1" nillable="true" type="xs:string"/>
+<xs:element minOccurs="0" name="UserDefined2" nillable="true" type="xs:string"/>
+<xs:element minOccurs="0" name="UserDefined3" nillable="true" type="xs:string"/>
+<xs:element minOccurs="0" name="UserDefined4" nillable="true" type="xs:string"/>
+<xs:element minOccurs="0" name="UserDefined5" nillable="true" type="xs:string"/>
+<xs:element minOccurs="0" name="UserDefined6" nillable="true" type="xs:string"/>
+<xs:element minOccurs="0" name="UserDefined7" nillable="true" type="xs:string"/>
+<xs:element minOccurs="0" name="UserDefined8" nillable="true" type="xs:string"/>
+<xs:element minOccurs="0" name="UserDefined9" nillable="true" type="xs:string"/>
+<xs:element minOccurs="0" name="UserDefined10" nillable="true" type="xs:string"/>
+</xs:sequence>
+</xs:complexType>
+<xs:element name="UserDefinedField" nillable="true" type="tns:UserDefinedField"/>
+<xs:complexType name="AdditionalOrderField">
+<xs:sequence>
+<xs:element minOccurs="0" name="CurrentTerritoryCode" nillable="true" type="xs:string"/>
+<xs:element minOccurs="0" name="CurrentTerritoryName" nillable="true" type="xs:string"/>
+<xs:element minOccurs="0" name="FixedTerritoryCode" nillable="true" type="xs:string"/>
+<xs:element minOccurs="0" name="FixedTerritoryName" nillable="true" type="xs:string"/>
+<xs:element minOccurs="0" name="OrderSourceCode" nillable="true" type="xs:string"/>
+<xs:element minOccurs="0" name="OrderSourceName" nillable="true" type="xs:string"/>
+<xs:element minOccurs="0" name="Future1" nillable="true" type="xs:string"/>
+<xs:element minOccurs="0" name="Future2" nillable="true" type="xs:string"/>
+<xs:element minOccurs="0" name="Future3" nillable="true" type="xs:string"/>
+<xs:element minOccurs="0" name="Future4" nillable="true" type="xs:string"/>
+<xs:element minOccurs="0" name="Future5" nillable="true" type="xs:string"/>
+<xs:element minOccurs="0" name="Future6" nillable="true" type="xs:string"/>
+<xs:element minOccurs="0" name="Future7" nillable="true" type="xs:string"/>
+<xs:element minOccurs="0" name="Future8" nillable="true" type="xs:string"/>
+<xs:element minOccurs="0" name="Future9" nillable="true" type="xs:string"/>
+<xs:element minOccurs="0" name="Future10" nillable="true" type="xs:string"/>
+</xs:sequence>
+</xs:complexType>
+<xs:element name="AdditionalOrderField" nillable="true" type="tns:AdditionalOrderField"/>
+<xs:simpleType name="ShippingMethod">
+<xs:restriction base="xs:string">
+<xs:enumeration value="None"/>
+<xs:enumeration value="PM"/>
+<xs:enumeration value="FC"/>
+<xs:enumeration value="FCN"/>
+<xs:enumeration value="FE2"/>
+<xs:enumeration value="FE3"/>
+<xs:enumeration value="FEG"/>
+<xs:enumeration value="FEI"/>
+<xs:enumeration value="FEP"/>
+<xs:enumeration value="FES"/>
+<xs:enumeration value="FFO"/>
+<xs:enumeration value="FHD"/>
+<xs:enumeration value="FIE"/>
+<xs:enumeration value="GP"/>
+<xs:enumeration value="UP2"/>
+<xs:enumeration value="UP3"/>
+<xs:enumeration value="UPN"/>
+<xs:enumeration value="UPS"/>
+<xs:enumeration value="UWC"/>
+<xs:enumeration value="UWE"/>
+<xs:enumeration value="UWP"/>
+<xs:enumeration value="UWS"/>
+<xs:enumeration value="UWX"/>
+<xs:enumeration value="UWA"/>
+<xs:enumeration value="U2A"/>
+<xs:enumeration value="UNS"/>
+<xs:enumeration value="DHI"/>
+<xs:enumeration value="PPM"/>
+<xs:enumeration value="PGP"/>
+<xs:enumeration value="LTL"/>
+<xs:enumeration value="TRUCK"/>
+<xs:enumeration value="COU"/>
+<xs:enumeration value="PICKUP"/>
+<xs:enumeration value="PFR"/>
+<xs:enumeration value="PEM"/>
+<xs:enumeration value="PMM"/>
+<xs:enumeration value="UPSSR"/>
+<xs:enumeration value="UP2SR"/>
+<xs:enumeration value="UP3SR"/>
+<xs:enumeration value="UPNSR"/>
+<xs:enumeration value="UPC"/>
+<xs:enumeration value="SL"/>
+<xs:enumeration value="PFC"/>
+<xs:enumeration value="APC"/>
+<xs:enumeration value="F2A"/>
+<xs:enumeration value="FGC"/>
+<xs:enumeration value="FGP"/>
+<xs:enumeration value="PFI"/>
+</xs:restriction>
+</xs:simpleType>
+<xs:element name="ShippingMethod" nillable="true" type="tns:ShippingMethod"/>
+<xs:complexType name="ShippingOption">
+<xs:sequence>
+<xs:element minOccurs="0" name="IsSignatureRequired" type="xs:boolean"/>
+<xs:element minOccurs="0" name="IsSaturdayDelivery" type="xs:boolean"/>
+<xs:element minOccurs="0" name="InsuranceAmount" type="xs:decimal"/>
+<xs:element minOccurs="0" name="IsInsured" type="xs:boolean"/>
+<xs:element minOccurs="0" name="IsCod" type="xs:boolean"/>
+<xs:element minOccurs="0" name="CodType" type="tns:COD"/>
+</xs:sequence>
+</xs:complexType>
+<xs:element name="ShippingOption" nillable="true" type="tns:ShippingOption"/>
+<xs:simpleType name="COD">
+<xs:restriction base="xs:string">
+<xs:enumeration value="NOCOD"/>
+<xs:enumeration value="FDX01"/>
+<xs:enumeration value="FDX02"/>
+<xs:enumeration value="FDX03"/>
+<xs:enumeration value="UPS01"/>
+<xs:enumeration value="UPS02"/>
+<xs:enumeration value="UPS03"/>
+<xs:enumeration value="UPS04"/>
+</xs:restriction>
+</xs:simpleType>
+<xs:element name="COD" nillable="true" type="tns:COD"/>
+<xs:complexType name="TechnicalContactCollection">
+<xs:sequence>
+<xs:element minOccurs="0" maxOccurs="unbounded" name="TechnicalContact" nillable="true" type="tns:TechnicalContact"/>
+</xs:sequence>
+</xs:complexType>
+<xs:element name="TechnicalContactCollection" nillable="true" type="tns:TechnicalContactCollection"/>
+<xs:complexType name="TechnicalContact">
+<xs:sequence>
+<xs:element minOccurs="0" name="Name" nillable="true" type="xs:string"/>
+<xs:element name="Email" nillable="true" type="xs:string"/>
+<xs:element minOccurs="0" name="Phone" nillable="true" type="xs:string"/>
+<xs:element minOccurs="0" name="EmailSubject" nillable="true" type="xs:string"/>
+<xs:element minOccurs="0" name="CC" nillable="true" type="xs:string"/>
+<xs:element minOccurs="0" name="BCC" nillable="true" type="xs:string"/>
+<xs:element minOccurs="0" name="NotificationType" type="tns:TechnicalNotificationType"/>
+</xs:sequence>
+</xs:complexType>
+<xs:element name="TechnicalContact" nillable="true" type="tns:TechnicalContact"/>
+<xs:simpleType name="TechnicalNotificationType">
+<xs:restriction base="xs:string">
+<xs:enumeration value="None"/>
+<xs:enumeration value="SuccessOnly"/>
+<xs:enumeration value="ErrorOnly"/>
+<xs:enumeration value="DataTruncation"/>
+<xs:enumeration value="All"/>
+</xs:restriction>
+</xs:simpleType>
+<xs:element name="TechnicalNotificationType" nillable="true" type="tns:TechnicalNotificationType"/>
+<xs:element name="OrderResponse">
+<xs:complexType>
+<xs:sequence>
+<xs:element minOccurs="0" name="Response" nillable="true" type="tns:Reply"/>
+</xs:sequence>
+</xs:complexType>
+</xs:element>
+<xs:complexType name="Reply">
+<xs:sequence>
+<xs:element minOccurs="0" name="OrderId" type="xs:int"/>
+<xs:element minOccurs="0" name="ConfirmationNumber" nillable="true" type="xs:string"/>
+<xs:element minOccurs="0" name="HighestSeverity" type="tns:NotificationSeverityType"/>
+<xs:element minOccurs="0" name="Notifications" nillable="true" type="tns:NotificationCollection"/>
+</xs:sequence>
+</xs:complexType>
+<xs:element name="Reply" nillable="true" type="tns:Reply"/>
+<xs:simpleType name="NotificationSeverityType">
+<xs:restriction base="xs:string">
+<xs:enumeration value="SUCCESS"/>
+<xs:enumeration value="ERROR"/>
+<xs:enumeration value="FAILURE"/>
+<xs:enumeration value="NOTE"/>
+<xs:enumeration value="WARNING"/>
+</xs:restriction>
+</xs:simpleType>
+<xs:element name="NotificationSeverityType" nillable="true" type="tns:NotificationSeverityType"/>
+<xs:complexType name="NotificationCollection">
+<xs:sequence>
+<xs:element minOccurs="0" maxOccurs="unbounded" name="Notification" nillable="true" type="tns:Notification"/>
+</xs:sequence>
+</xs:complexType>
+<xs:element name="NotificationCollection" nillable="true" type="tns:NotificationCollection"/>
+<xs:complexType name="Notification">
+<xs:sequence>
+<xs:element minOccurs="0" name="Message" nillable="true" type="xs:string"/>
+<xs:element minOccurs="0" name="Severity" type="tns:NotificationSeverityType"/>
+</xs:sequence>
+</xs:complexType>
+<xs:element name="Notification" nillable="true" type="tns:Notification"/>
+<xs:element name="StatusRequest">
+<xs:complexType>
+<xs:sequence>
+<xs:element minOccurs="0" name="Status" nillable="true" type="tns:ServiceStatusRequest"/>
+</xs:sequence>
+</xs:complexType>
+</xs:element>
+<xs:complexType name="ServiceStatusRequest">
+<xs:sequence>
+<xs:element minOccurs="0" name="AuthenticationKey" nillable="true" type="xs:string"/>
+<xs:element minOccurs="0" name="OwnerCode" nillable="true" type="xs:string"/>
+</xs:sequence>
+</xs:complexType>
+<xs:element name="ServiceStatusRequest" nillable="true" type="tns:ServiceStatusRequest"/>
+<xs:element name="StatusResponse">
+<xs:complexType>
+<xs:sequence>
+<xs:element minOccurs="0" name="ServiceStatus" nillable="true" type="xs:string"/>
+</xs:sequence>
+</xs:complexType>
+</xs:element>
+</xs:schema>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:tns="http://schemas.microsoft.com/2003/10/Serialization/" attributeFormDefault="qualified" elementFormDefault="qualified" targetNamespace="http://schemas.microsoft.com/2003/10/Serialization/">
+<xs:element name="anyType" nillable="true" type="xs:anyType"/>
+<xs:element name="anyURI" nillable="true" type="xs:anyURI"/>
+<xs:element name="base64Binary" nillable="true" type="xs:base64Binary"/>
+<xs:element name="boolean" nillable="true" type="xs:boolean"/>
+<xs:element name="byte" nillable="true" type="xs:byte"/>
+<xs:element name="dateTime" nillable="true" type="xs:dateTime"/>
+<xs:element name="decimal" nillable="true" type="xs:decimal"/>
+<xs:element name="double" nillable="true" type="xs:double"/>
+<xs:element name="float" nillable="true" type="xs:float"/>
+<xs:element name="int" nillable="true" type="xs:int"/>
+<xs:element name="long" nillable="true" type="xs:long"/>
+<xs:element name="QName" nillable="true" type="xs:QName"/>
+<xs:element name="short" nillable="true" type="xs:short"/>
+<xs:element name="string" nillable="true" type="xs:string"/>
+<xs:element name="unsignedByte" nillable="true" type="xs:unsignedByte"/>
+<xs:element name="unsignedInt" nillable="true" type="xs:unsignedInt"/>
+<xs:element name="unsignedLong" nillable="true" type="xs:unsignedLong"/>
+<xs:element name="unsignedShort" nillable="true" type="xs:unsignedShort"/>
+<xs:element name="char" nillable="true" type="tns:char"/>
+<xs:simpleType name="char">
+<xs:restriction base="xs:int"/>
+</xs:simpleType>
+<xs:element name="duration" nillable="true" type="tns:duration"/>
+<xs:simpleType name="duration">
+<xs:restriction base="xs:duration">
+<xs:pattern value="\-?P(\d*D)?(T(\d*H)?(\d*M)?(\d*(\.\d*)?S)?)?"/>
+<xs:minInclusive value="-P10675199DT2H48M5.4775808S"/>
+<xs:maxInclusive value="P10675199DT2H48M5.4775807S"/>
+</xs:restriction>
+</xs:simpleType>
+<xs:element name="guid" nillable="true" type="tns:guid"/>
+<xs:simpleType name="guid">
+<xs:restriction base="xs:string">
+<xs:pattern value="[\da-fA-F]{8}-[\da-fA-F]{4}-[\da-fA-F]{4}-[\da-fA-F]{4}-[\da-fA-F]{12}"/>
+</xs:restriction>
+</xs:simpleType>
+<xs:attribute name="FactoryType" type="xs:QName"/>
+<xs:attribute name="Id" type="xs:ID"/>
+<xs:attribute name="Ref" type="xs:IDREF"/>
+</xs:schema>
+</wsdl:types>
+<wsdl:message name="OrderRequest">
+<wsdl:part xmlns:q1="https://www.fsicatalog.com/services/orderprocessing/v4" name="parameters" element="q1:OrderRequest"/>
+</wsdl:message>
+<wsdl:message name="OrderResponse">
+<wsdl:part xmlns:q2="https://www.fsicatalog.com/services/orderprocessing/v4" name="parameters" element="q2:OrderResponse"/>
+</wsdl:message>
+<wsdl:message name="StatusRequest">
+<wsdl:part xmlns:q3="https://www.fsicatalog.com/services/orderprocessing/v4" name="parameters" element="q3:StatusRequest"/>
+</wsdl:message>
+<wsdl:message name="StatusResponse">
+<wsdl:part xmlns:q4="https://www.fsicatalog.com/services/orderprocessing/v4" name="parameters" element="q4:StatusResponse"/>
+</wsdl:message>
+<wsdl:portType name="IOrdersContract">
+<wsdl:operation name="ProcessOrder">
+<wsdl:input wsaw:Action="https://www.fsicatalog.com/services/orderprocessing/v4/OrdersContract/ProcessOrder" name="OrderRequest" message="tns:OrderRequest"/>
+<wsdl:output wsaw:Action="https://www.fsicatalog.com/services/orderprocessing/v4/OrdersContract/ProcessOrder" name="OrderResponse" message="tns:OrderResponse"/>
+</wsdl:operation>
+<wsdl:operation name="GetServiceStatus">
+<wsdl:input wsaw:Action="https://www.fsicatalog.com/services/orderprocessing/v4/OrdersContract/GetServiceStatus" name="StatusRequest" message="tns:StatusRequest"/>
+<wsdl:output wsaw:Action="https://www.fsicatalog.com/services/orderprocessing/v4/OrdersContract/GetServiceStatus" name="StatusResponse" message="tns:StatusResponse"/>
+</wsdl:operation>
+</wsdl:portType>
+<wsdl:binding name="OrdersEndpointSoap11" type="tns:IOrdersContract">
+<wsp:PolicyReference URI="#OrdersEndpointSoap11_policy"/>
+<soap:binding transport="http://schemas.xmlsoap.org/soap/http"/>
+<wsdl:operation name="ProcessOrder">
+<soap:operation soapAction="https://www.fsicatalog.com/services/orderprocessing/v4/OrdersContract/ProcessOrder" style="document"/>
+<wsdl:input name="OrderRequest">
+<soap:body use="literal"/>
+</wsdl:input>
+<wsdl:output name="OrderResponse">
+<soap:body use="literal"/>
+</wsdl:output>
+</wsdl:operation>
+<wsdl:operation name="GetServiceStatus">
+<soap:operation soapAction="https://www.fsicatalog.com/services/orderprocessing/v4/OrdersContract/GetServiceStatus" style="document"/>
+<wsdl:input name="StatusRequest">
+<soap:body use="literal"/>
+</wsdl:input>
+<wsdl:output name="StatusResponse">
+<soap:body use="literal"/>
+</wsdl:output>
+</wsdl:operation>
+</wsdl:binding>
+<wsdl:binding name="OrdersEndpoint" type="tns:IOrdersContract">
+<wsp:PolicyReference URI="#OrdersEndpoint_policy"/>
+<soap12:binding transport="http://schemas.xmlsoap.org/soap/http"/>
+<wsdl:operation name="ProcessOrder">
+<soap12:operation soapAction="https://www.fsicatalog.com/services/orderprocessing/v4/OrdersContract/ProcessOrder" style="document"/>
+<wsdl:input name="OrderRequest">
+<soap12:body use="literal"/>
+</wsdl:input>
+<wsdl:output name="OrderResponse">
+<soap12:body use="literal"/>
+</wsdl:output>
+</wsdl:operation>
+<wsdl:operation name="GetServiceStatus">
+<soap12:operation soapAction="https://www.fsicatalog.com/services/orderprocessing/v4/OrdersContract/GetServiceStatus" style="document"/>
+<wsdl:input name="StatusRequest">
+<soap12:body use="literal"/>
+</wsdl:input>
+<wsdl:output name="StatusResponse">
+<soap12:body use="literal"/>
+</wsdl:output>
+</wsdl:operation>
+</wsdl:binding>
+<wsdl:service name="Orders">
+<wsdl:port name="OrdersEndpoint" binding="tns:OrdersEndpoint">
+<soap12:address location="https://test.fsicatalog.com/Services/OrderProcessing/V4/Orders.svc"/>
+<wsa10:EndpointReference>
+<wsa10:Address>
+https://test.fsicatalog.com/Services/OrderProcessing/V4/Orders.svc
+</wsa10:Address>
+</wsa10:EndpointReference>
+</wsdl:port>
+<wsdl:port name="OrdersEndpointSoap11" binding="tns:OrdersEndpointSoap11">
+<soap:address location="https://test.fsicatalog.com/Services/OrderProcessing/V4/Orders.svc/soap11"/>
+</wsdl:port>
+</wsdl:service>
+</wsdl:definitions>
