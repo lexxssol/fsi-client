@@ -33,14 +33,14 @@ public class ObjectFactory {
     private final static QName _DateTime_QNAME = new QName("http://schemas.microsoft.com/2003/10/Serialization/", "dateTime");
     private final static QName _Char_QNAME = new QName("http://schemas.microsoft.com/2003/10/Serialization/", "char");
     private final static QName _OrderMessage_QNAME = new QName("https://www.fsicatalog.com/services/orderprocessing/v4", "OrderMessage");
-    private final static QName _QName_QNAME = new QName("http://schemas.microsoft.com/2003/10/Serialization/", "QName");
     private final static QName _LineItemCollection_QNAME = new QName("https://www.fsicatalog.com/services/orderprocessing/v4", "LineItemCollection");
+    private final static QName _QName_QNAME = new QName("http://schemas.microsoft.com/2003/10/Serialization/", "QName");
     private final static QName _OrderHoldCollection_QNAME = new QName("https://www.fsicatalog.com/services/orderprocessing/v4", "OrderHoldCollection");
     private final static QName _UnsignedShort_QNAME = new QName("http://schemas.microsoft.com/2003/10/Serialization/", "unsignedShort");
     private final static QName _COD_QNAME = new QName("https://www.fsicatalog.com/services/orderprocessing/v4", "COD");
     private final static QName _Float_QNAME = new QName("http://schemas.microsoft.com/2003/10/Serialization/", "float");
-    private final static QName _Long_QNAME = new QName("http://schemas.microsoft.com/2003/10/Serialization/", "long");
     private final static QName _AdditionalOrderField_QNAME = new QName("https://www.fsicatalog.com/services/orderprocessing/v4", "AdditionalOrderField");
+    private final static QName _Long_QNAME = new QName("http://schemas.microsoft.com/2003/10/Serialization/", "long");
     private final static QName _Short_QNAME = new QName("http://schemas.microsoft.com/2003/10/Serialization/", "short");
     private final static QName _Payment_QNAME = new QName("https://www.fsicatalog.com/services/orderprocessing/v4", "Payment");
     private final static QName _OrderHold_QNAME = new QName("https://www.fsicatalog.com/services/orderprocessing/v4", "OrderHold");
@@ -55,27 +55,54 @@ public class ObjectFactory {
     private final static QName _UnsignedByte_QNAME = new QName("http://schemas.microsoft.com/2003/10/Serialization/", "unsignedByte");
     private final static QName _AnyType_QNAME = new QName("http://schemas.microsoft.com/2003/10/Serialization/", "anyType");
     private final static QName _UnsignedInt_QNAME = new QName("http://schemas.microsoft.com/2003/10/Serialization/", "unsignedInt");
-    private final static QName _Int_QNAME = new QName("http://schemas.microsoft.com/2003/10/Serialization/", "int");
     private final static QName _Reply_QNAME = new QName("https://www.fsicatalog.com/services/orderprocessing/v4", "Reply");
+    private final static QName _Int_QNAME = new QName("http://schemas.microsoft.com/2003/10/Serialization/", "int");
     private final static QName _Address_QNAME = new QName("https://www.fsicatalog.com/services/orderprocessing/v4", "Address");
     private final static QName _Decimal_QNAME = new QName("http://schemas.microsoft.com/2003/10/Serialization/", "decimal");
     private final static QName _Double_QNAME = new QName("http://schemas.microsoft.com/2003/10/Serialization/", "double");
     private final static QName _UserDefinedField_QNAME = new QName("https://www.fsicatalog.com/services/orderprocessing/v4", "UserDefinedField");
     private final static QName _ServiceStatusRequest_QNAME = new QName("https://www.fsicatalog.com/services/orderprocessing/v4", "ServiceStatusRequest");
-    private final static QName _Guid_QNAME = new QName("http://schemas.microsoft.com/2003/10/Serialization/", "guid");
     private final static QName _Notification_QNAME = new QName("https://www.fsicatalog.com/services/orderprocessing/v4", "Notification");
-    private final static QName _Duration_QNAME = new QName("http://schemas.microsoft.com/2003/10/Serialization/", "duration");
+    private final static QName _Guid_QNAME = new QName("http://schemas.microsoft.com/2003/10/Serialization/", "guid");
     private final static QName _TechnicalContactCollection_QNAME = new QName("https://www.fsicatalog.com/services/orderprocessing/v4", "TechnicalContactCollection");
+    private final static QName _Duration_QNAME = new QName("http://schemas.microsoft.com/2003/10/Serialization/", "duration");
     private final static QName _MessageCollection_QNAME = new QName("https://www.fsicatalog.com/services/orderprocessing/v4", "MessageCollection");
     private final static QName _String_QNAME = new QName("http://schemas.microsoft.com/2003/10/Serialization/", "string");
     private final static QName _PaymentMethod_QNAME = new QName("https://www.fsicatalog.com/services/orderprocessing/v4", "PaymentMethod");
-    private final static QName _ShippingMethod_QNAME = new QName("https://www.fsicatalog.com/services/orderprocessing/v4", "ShippingMethod");
     private final static QName _TechnicalContact_QNAME = new QName("https://www.fsicatalog.com/services/orderprocessing/v4", "TechnicalContact");
+    private final static QName _ShippingMethod_QNAME = new QName("https://www.fsicatalog.com/services/orderprocessing/v4", "ShippingMethod");
     private final static QName _UnsignedLong_QNAME = new QName("http://schemas.microsoft.com/2003/10/Serialization/", "unsignedLong");
     private final static QName _ShippingOption_QNAME = new QName("https://www.fsicatalog.com/services/orderprocessing/v4", "ShippingOption");
     private final static QName _OrderMessageType_QNAME = new QName("https://www.fsicatalog.com/services/orderprocessing/v4", "OrderMessageType");
-    private final static QName _OrderMessageText_QNAME = new QName("https://www.fsicatalog.com/services/orderprocessing/v4", "Text");
+    private final static QName _ReplyNotifications_QNAME = new QName("https://www.fsicatalog.com/services/orderprocessing/v4", "Notifications");
+    private final static QName _ReplyConfirmationNumber_QNAME = new QName("https://www.fsicatalog.com/services/orderprocessing/v4", "ConfirmationNumber");
+    private final static QName _StatusResponseServiceStatus_QNAME = new QName("https://www.fsicatalog.com/services/orderprocessing/v4", "ServiceStatus");
     private final static QName _StatusRequestStatus_QNAME = new QName("https://www.fsicatalog.com/services/orderprocessing/v4", "Status");
+    private final static QName _AdditionalOrderFieldOrderSourceName_QNAME = new QName("https://www.fsicatalog.com/services/orderprocessing/v4", "OrderSourceName");
+    private final static QName _AdditionalOrderFieldFuture5_QNAME = new QName("https://www.fsicatalog.com/services/orderprocessing/v4", "Future5");
+    private final static QName _AdditionalOrderFieldFuture10_QNAME = new QName("https://www.fsicatalog.com/services/orderprocessing/v4", "Future10");
+    private final static QName _AdditionalOrderFieldFuture6_QNAME = new QName("https://www.fsicatalog.com/services/orderprocessing/v4", "Future6");
+    private final static QName _AdditionalOrderFieldFuture3_QNAME = new QName("https://www.fsicatalog.com/services/orderprocessing/v4", "Future3");
+    private final static QName _AdditionalOrderFieldFuture4_QNAME = new QName("https://www.fsicatalog.com/services/orderprocessing/v4", "Future4");
+    private final static QName _AdditionalOrderFieldFuture9_QNAME = new QName("https://www.fsicatalog.com/services/orderprocessing/v4", "Future9");
+    private final static QName _AdditionalOrderFieldFuture7_QNAME = new QName("https://www.fsicatalog.com/services/orderprocessing/v4", "Future7");
+    private final static QName _AdditionalOrderFieldFuture8_QNAME = new QName("https://www.fsicatalog.com/services/orderprocessing/v4", "Future8");
+    private final static QName _AdditionalOrderFieldOrderSourceCode_QNAME = new QName("https://www.fsicatalog.com/services/orderprocessing/v4", "OrderSourceCode");
+    private final static QName _AdditionalOrderFieldCurrentTerritoryCode_QNAME = new QName("https://www.fsicatalog.com/services/orderprocessing/v4", "CurrentTerritoryCode");
+    private final static QName _AdditionalOrderFieldFixedTerritoryName_QNAME = new QName("https://www.fsicatalog.com/services/orderprocessing/v4", "FixedTerritoryName");
+    private final static QName _AdditionalOrderFieldFixedTerritoryCode_QNAME = new QName("https://www.fsicatalog.com/services/orderprocessing/v4", "FixedTerritoryCode");
+    private final static QName _AdditionalOrderFieldCurrentTerritoryName_QNAME = new QName("https://www.fsicatalog.com/services/orderprocessing/v4", "CurrentTerritoryName");
+    private final static QName _AdditionalOrderFieldFuture2_QNAME = new QName("https://www.fsicatalog.com/services/orderprocessing/v4", "Future2");
+    private final static QName _AdditionalOrderFieldFuture1_QNAME = new QName("https://www.fsicatalog.com/services/orderprocessing/v4", "Future1");
+    private final static QName _LineItemColor_QNAME = new QName("https://www.fsicatalog.com/services/orderprocessing/v4", "Color");
+    private final static QName _LineItemSize_QNAME = new QName("https://www.fsicatalog.com/services/orderprocessing/v4", "Size");
+    private final static QName _LineItemLineID_QNAME = new QName("https://www.fsicatalog.com/services/orderprocessing/v4", "LineID");
+    private final static QName _LineItemLineUDF1_QNAME = new QName("https://www.fsicatalog.com/services/orderprocessing/v4", "LineUDF1");
+    private final static QName _LineItemItemNumber_QNAME = new QName("https://www.fsicatalog.com/services/orderprocessing/v4", "ItemNumber");
+    private final static QName _LineItemLineUDF2_QNAME = new QName("https://www.fsicatalog.com/services/orderprocessing/v4", "LineUDF2");
+    private final static QName _LineItemLineUDF4_QNAME = new QName("https://www.fsicatalog.com/services/orderprocessing/v4", "LineUDF4");
+    private final static QName _LineItemLineUDF3_QNAME = new QName("https://www.fsicatalog.com/services/orderprocessing/v4", "LineUDF3");
+    private final static QName _LineItemLineUDF5_QNAME = new QName("https://www.fsicatalog.com/services/orderprocessing/v4", "LineUDF5");
     private final static QName _UserDefinedFieldUserDefined9_QNAME = new QName("https://www.fsicatalog.com/services/orderprocessing/v4", "UserDefined9");
     private final static QName _UserDefinedFieldUserDefined8_QNAME = new QName("https://www.fsicatalog.com/services/orderprocessing/v4", "UserDefined8");
     private final static QName _UserDefinedFieldUserDefined7_QNAME = new QName("https://www.fsicatalog.com/services/orderprocessing/v4", "UserDefined7");
@@ -87,15 +114,11 @@ public class ObjectFactory {
     private final static QName _UserDefinedFieldUserDefined2_QNAME = new QName("https://www.fsicatalog.com/services/orderprocessing/v4", "UserDefined2");
     private final static QName _UserDefinedFieldUserDefined1_QNAME = new QName("https://www.fsicatalog.com/services/orderprocessing/v4", "UserDefined1");
     private final static QName _UserDefinedFieldUserDefined0_QNAME = new QName("https://www.fsicatalog.com/services/orderprocessing/v4", "UserDefined0");
-    private final static QName _LineItemColor_QNAME = new QName("https://www.fsicatalog.com/services/orderprocessing/v4", "Color");
-    private final static QName _LineItemSize_QNAME = new QName("https://www.fsicatalog.com/services/orderprocessing/v4", "Size");
-    private final static QName _LineItemLineID_QNAME = new QName("https://www.fsicatalog.com/services/orderprocessing/v4", "LineID");
-    private final static QName _LineItemLineUDF1_QNAME = new QName("https://www.fsicatalog.com/services/orderprocessing/v4", "LineUDF1");
-    private final static QName _LineItemItemNumber_QNAME = new QName("https://www.fsicatalog.com/services/orderprocessing/v4", "ItemNumber");
-    private final static QName _LineItemLineUDF2_QNAME = new QName("https://www.fsicatalog.com/services/orderprocessing/v4", "LineUDF2");
-    private final static QName _LineItemLineUDF4_QNAME = new QName("https://www.fsicatalog.com/services/orderprocessing/v4", "LineUDF4");
-    private final static QName _LineItemLineUDF3_QNAME = new QName("https://www.fsicatalog.com/services/orderprocessing/v4", "LineUDF3");
-    private final static QName _LineItemLineUDF5_QNAME = new QName("https://www.fsicatalog.com/services/orderprocessing/v4", "LineUDF5");
+    private final static QName _TechnicalContactCC_QNAME = new QName("https://www.fsicatalog.com/services/orderprocessing/v4", "CC");
+    private final static QName _TechnicalContactEmailSubject_QNAME = new QName("https://www.fsicatalog.com/services/orderprocessing/v4", "EmailSubject");
+    private final static QName _TechnicalContactName_QNAME = new QName("https://www.fsicatalog.com/services/orderprocessing/v4", "Name");
+    private final static QName _TechnicalContactBCC_QNAME = new QName("https://www.fsicatalog.com/services/orderprocessing/v4", "BCC");
+    private final static QName _TechnicalContactPhone_QNAME = new QName("https://www.fsicatalog.com/services/orderprocessing/v4", "Phone");
     private final static QName _RequestPromotionCode_QNAME = new QName("https://www.fsicatalog.com/services/orderprocessing/v4", "PromotionCode");
     private final static QName _RequestShipmentOption_QNAME = new QName("https://www.fsicatalog.com/services/orderprocessing/v4", "ShipmentOption");
     private final static QName _RequestAuthenticationKey_QNAME = new QName("https://www.fsicatalog.com/services/orderprocessing/v4", "AuthenticationKey");
@@ -116,6 +139,7 @@ public class ObjectFactory {
     private final static QName _RequestUserDefinedInfo_QNAME = new QName("https://www.fsicatalog.com/services/orderprocessing/v4", "UserDefinedInfo");
     private final static QName _RequestOwnerCode_QNAME = new QName("https://www.fsicatalog.com/services/orderprocessing/v4", "OwnerCode");
     private final static QName _RequestOrderDate_QNAME = new QName("https://www.fsicatalog.com/services/orderprocessing/v4", "OrderDate");
+    private final static QName _OrderRequestOrder_QNAME = new QName("https://www.fsicatalog.com/services/orderprocessing/v4", "Order");
     private final static QName _AddressDepartment_QNAME = new QName("https://www.fsicatalog.com/services/orderprocessing/v4", "Department");
     private final static QName _AddressAttention_QNAME = new QName("https://www.fsicatalog.com/services/orderprocessing/v4", "Attention");
     private final static QName _AddressCity_QNAME = new QName("https://www.fsicatalog.com/services/orderprocessing/v4", "City");
@@ -123,37 +147,13 @@ public class ObjectFactory {
     private final static QName _AddressState_QNAME = new QName("https://www.fsicatalog.com/services/orderprocessing/v4", "State");
     private final static QName _AddressAddress2_QNAME = new QName("https://www.fsicatalog.com/services/orderprocessing/v4", "Address2");
     private final static QName _AddressAddress1_QNAME = new QName("https://www.fsicatalog.com/services/orderprocessing/v4", "Address1");
-    private final static QName _AddressName_QNAME = new QName("https://www.fsicatalog.com/services/orderprocessing/v4", "Name");
-    private final static QName _AddressPhone_QNAME = new QName("https://www.fsicatalog.com/services/orderprocessing/v4", "Phone");
     private final static QName _AddressPostalCode_QNAME = new QName("https://www.fsicatalog.com/services/orderprocessing/v4", "PostalCode");
-    private final static QName _ReplyNotifications_QNAME = new QName("https://www.fsicatalog.com/services/orderprocessing/v4", "Notifications");
-    private final static QName _ReplyConfirmationNumber_QNAME = new QName("https://www.fsicatalog.com/services/orderprocessing/v4", "ConfirmationNumber");
-    private final static QName _TechnicalContactCC_QNAME = new QName("https://www.fsicatalog.com/services/orderprocessing/v4", "CC");
-    private final static QName _TechnicalContactEmailSubject_QNAME = new QName("https://www.fsicatalog.com/services/orderprocessing/v4", "EmailSubject");
-    private final static QName _TechnicalContactBCC_QNAME = new QName("https://www.fsicatalog.com/services/orderprocessing/v4", "BCC");
-    private final static QName _OrderResponseResponse_QNAME = new QName("https://www.fsicatalog.com/services/orderprocessing/v4", "Response");
-    private final static QName _AdditionalOrderFieldOrderSourceName_QNAME = new QName("https://www.fsicatalog.com/services/orderprocessing/v4", "OrderSourceName");
-    private final static QName _AdditionalOrderFieldFuture5_QNAME = new QName("https://www.fsicatalog.com/services/orderprocessing/v4", "Future5");
-    private final static QName _AdditionalOrderFieldFuture10_QNAME = new QName("https://www.fsicatalog.com/services/orderprocessing/v4", "Future10");
-    private final static QName _AdditionalOrderFieldFuture6_QNAME = new QName("https://www.fsicatalog.com/services/orderprocessing/v4", "Future6");
-    private final static QName _AdditionalOrderFieldFuture3_QNAME = new QName("https://www.fsicatalog.com/services/orderprocessing/v4", "Future3");
-    private final static QName _AdditionalOrderFieldFuture4_QNAME = new QName("https://www.fsicatalog.com/services/orderprocessing/v4", "Future4");
-    private final static QName _AdditionalOrderFieldFuture9_QNAME = new QName("https://www.fsicatalog.com/services/orderprocessing/v4", "Future9");
-    private final static QName _AdditionalOrderFieldFuture7_QNAME = new QName("https://www.fsicatalog.com/services/orderprocessing/v4", "Future7");
-    private final static QName _AdditionalOrderFieldFuture8_QNAME = new QName("https://www.fsicatalog.com/services/orderprocessing/v4", "Future8");
-    private final static QName _AdditionalOrderFieldOrderSourceCode_QNAME = new QName("https://www.fsicatalog.com/services/orderprocessing/v4", "OrderSourceCode");
-    private final static QName _AdditionalOrderFieldCurrentTerritoryCode_QNAME = new QName("https://www.fsicatalog.com/services/orderprocessing/v4", "CurrentTerritoryCode");
-    private final static QName _AdditionalOrderFieldFixedTerritoryName_QNAME = new QName("https://www.fsicatalog.com/services/orderprocessing/v4", "FixedTerritoryName");
-    private final static QName _AdditionalOrderFieldFixedTerritoryCode_QNAME = new QName("https://www.fsicatalog.com/services/orderprocessing/v4", "FixedTerritoryCode");
-    private final static QName _AdditionalOrderFieldCurrentTerritoryName_QNAME = new QName("https://www.fsicatalog.com/services/orderprocessing/v4", "CurrentTerritoryName");
-    private final static QName _AdditionalOrderFieldFuture2_QNAME = new QName("https://www.fsicatalog.com/services/orderprocessing/v4", "Future2");
-    private final static QName _AdditionalOrderFieldFuture1_QNAME = new QName("https://www.fsicatalog.com/services/orderprocessing/v4", "Future1");
-    private final static QName _StatusResponseServiceStatus_QNAME = new QName("https://www.fsicatalog.com/services/orderprocessing/v4", "ServiceStatus");
+    private final static QName _NotificationMessage_QNAME = new QName("https://www.fsicatalog.com/services/orderprocessing/v4", "Message");
     private final static QName _PaymentExpirationDate_QNAME = new QName("https://www.fsicatalog.com/services/orderprocessing/v4", "ExpirationDate");
     private final static QName _PaymentReferenceNumber_QNAME = new QName("https://www.fsicatalog.com/services/orderprocessing/v4", "ReferenceNumber");
     private final static QName _PaymentCreditCardNumber_QNAME = new QName("https://www.fsicatalog.com/services/orderprocessing/v4", "CreditCardNumber");
-    private final static QName _OrderRequestOrder_QNAME = new QName("https://www.fsicatalog.com/services/orderprocessing/v4", "Order");
-    private final static QName _NotificationMessage_QNAME = new QName("https://www.fsicatalog.com/services/orderprocessing/v4", "Message");
+    private final static QName _OrderMessageText_QNAME = new QName("https://www.fsicatalog.com/services/orderprocessing/v4", "Text");
+    private final static QName _OrderResponseResponse_QNAME = new QName("https://www.fsicatalog.com/services/orderprocessing/v4", "Response");
 
     /**
      * Create a new ObjectFactory that can be used to create new instances of schema derived classes for package: com.sheerimagination.businessobject.fulfillment.fsi.orders.api
@@ -384,21 +384,21 @@ public class ObjectFactory {
     }
 
     /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link QName }{@code >}}
-     * 
-     */
-    @XmlElementDecl(namespace = "http://schemas.microsoft.com/2003/10/Serialization/", name = "QName")
-    public JAXBElement<QName> createQName(QName value) {
-        return new JAXBElement<QName>(_QName_QNAME, QName.class, null, value);
-    }
-
-    /**
      * Create an instance of {@link JAXBElement }{@code <}{@link LineItemCollection }{@code >}}
      * 
      */
     @XmlElementDecl(namespace = "https://www.fsicatalog.com/services/orderprocessing/v4", name = "LineItemCollection")
     public JAXBElement<LineItemCollection> createLineItemCollection(LineItemCollection value) {
         return new JAXBElement<LineItemCollection>(_LineItemCollection_QNAME, LineItemCollection.class, null, value);
+    }
+
+    /**
+     * Create an instance of {@link JAXBElement }{@code <}{@link QName }{@code >}}
+     * 
+     */
+    @XmlElementDecl(namespace = "http://schemas.microsoft.com/2003/10/Serialization/", name = "QName")
+    public JAXBElement<QName> createQName(QName value) {
+        return new JAXBElement<QName>(_QName_QNAME, QName.class, null, value);
     }
 
     /**
@@ -438,21 +438,21 @@ public class ObjectFactory {
     }
 
     /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link Long }{@code >}}
-     * 
-     */
-    @XmlElementDecl(namespace = "http://schemas.microsoft.com/2003/10/Serialization/", name = "long")
-    public JAXBElement<Long> createLong(Long value) {
-        return new JAXBElement<Long>(_Long_QNAME, Long.class, null, value);
-    }
-
-    /**
      * Create an instance of {@link JAXBElement }{@code <}{@link AdditionalOrderField }{@code >}}
      * 
      */
     @XmlElementDecl(namespace = "https://www.fsicatalog.com/services/orderprocessing/v4", name = "AdditionalOrderField")
     public JAXBElement<AdditionalOrderField> createAdditionalOrderField(AdditionalOrderField value) {
         return new JAXBElement<AdditionalOrderField>(_AdditionalOrderField_QNAME, AdditionalOrderField.class, null, value);
+    }
+
+    /**
+     * Create an instance of {@link JAXBElement }{@code <}{@link Long }{@code >}}
+     * 
+     */
+    @XmlElementDecl(namespace = "http://schemas.microsoft.com/2003/10/Serialization/", name = "long")
+    public JAXBElement<Long> createLong(Long value) {
+        return new JAXBElement<Long>(_Long_QNAME, Long.class, null, value);
     }
 
     /**
@@ -582,21 +582,21 @@ public class ObjectFactory {
     }
 
     /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link Integer }{@code >}}
-     * 
-     */
-    @XmlElementDecl(namespace = "http://schemas.microsoft.com/2003/10/Serialization/", name = "int")
-    public JAXBElement<Integer> createInt(Integer value) {
-        return new JAXBElement<Integer>(_Int_QNAME, Integer.class, null, value);
-    }
-
-    /**
      * Create an instance of {@link JAXBElement }{@code <}{@link Reply }{@code >}}
      * 
      */
     @XmlElementDecl(namespace = "https://www.fsicatalog.com/services/orderprocessing/v4", name = "Reply")
     public JAXBElement<Reply> createReply(Reply value) {
         return new JAXBElement<Reply>(_Reply_QNAME, Reply.class, null, value);
+    }
+
+    /**
+     * Create an instance of {@link JAXBElement }{@code <}{@link Integer }{@code >}}
+     * 
+     */
+    @XmlElementDecl(namespace = "http://schemas.microsoft.com/2003/10/Serialization/", name = "int")
+    public JAXBElement<Integer> createInt(Integer value) {
+        return new JAXBElement<Integer>(_Int_QNAME, Integer.class, null, value);
     }
 
     /**
@@ -645,15 +645,6 @@ public class ObjectFactory {
     }
 
     /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link String }{@code >}}
-     * 
-     */
-    @XmlElementDecl(namespace = "http://schemas.microsoft.com/2003/10/Serialization/", name = "guid")
-    public JAXBElement<String> createGuid(String value) {
-        return new JAXBElement<String>(_Guid_QNAME, String.class, null, value);
-    }
-
-    /**
      * Create an instance of {@link JAXBElement }{@code <}{@link Notification }{@code >}}
      * 
      */
@@ -663,12 +654,12 @@ public class ObjectFactory {
     }
 
     /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link Duration }{@code >}}
+     * Create an instance of {@link JAXBElement }{@code <}{@link String }{@code >}}
      * 
      */
-    @XmlElementDecl(namespace = "http://schemas.microsoft.com/2003/10/Serialization/", name = "duration")
-    public JAXBElement<Duration> createDuration(Duration value) {
-        return new JAXBElement<Duration>(_Duration_QNAME, Duration.class, null, value);
+    @XmlElementDecl(namespace = "http://schemas.microsoft.com/2003/10/Serialization/", name = "guid")
+    public JAXBElement<String> createGuid(String value) {
+        return new JAXBElement<String>(_Guid_QNAME, String.class, null, value);
     }
 
     /**
@@ -678,6 +669,15 @@ public class ObjectFactory {
     @XmlElementDecl(namespace = "https://www.fsicatalog.com/services/orderprocessing/v4", name = "TechnicalContactCollection")
     public JAXBElement<TechnicalContactCollection> createTechnicalContactCollection(TechnicalContactCollection value) {
         return new JAXBElement<TechnicalContactCollection>(_TechnicalContactCollection_QNAME, TechnicalContactCollection.class, null, value);
+    }
+
+    /**
+     * Create an instance of {@link JAXBElement }{@code <}{@link Duration }{@code >}}
+     * 
+     */
+    @XmlElementDecl(namespace = "http://schemas.microsoft.com/2003/10/Serialization/", name = "duration")
+    public JAXBElement<Duration> createDuration(Duration value) {
+        return new JAXBElement<Duration>(_Duration_QNAME, Duration.class, null, value);
     }
 
     /**
@@ -708,21 +708,21 @@ public class ObjectFactory {
     }
 
     /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link ShippingMethod }{@code >}}
-     * 
-     */
-    @XmlElementDecl(namespace = "https://www.fsicatalog.com/services/orderprocessing/v4", name = "ShippingMethod")
-    public JAXBElement<ShippingMethod> createShippingMethod(ShippingMethod value) {
-        return new JAXBElement<ShippingMethod>(_ShippingMethod_QNAME, ShippingMethod.class, null, value);
-    }
-
-    /**
      * Create an instance of {@link JAXBElement }{@code <}{@link TechnicalContact }{@code >}}
      * 
      */
     @XmlElementDecl(namespace = "https://www.fsicatalog.com/services/orderprocessing/v4", name = "TechnicalContact")
     public JAXBElement<TechnicalContact> createTechnicalContact(TechnicalContact value) {
         return new JAXBElement<TechnicalContact>(_TechnicalContact_QNAME, TechnicalContact.class, null, value);
+    }
+
+    /**
+     * Create an instance of {@link JAXBElement }{@code <}{@link ShippingMethod }{@code >}}
+     * 
+     */
+    @XmlElementDecl(namespace = "https://www.fsicatalog.com/services/orderprocessing/v4", name = "ShippingMethod")
+    public JAXBElement<ShippingMethod> createShippingMethod(ShippingMethod value) {
+        return new JAXBElement<ShippingMethod>(_ShippingMethod_QNAME, ShippingMethod.class, null, value);
     }
 
     /**
@@ -753,12 +753,30 @@ public class ObjectFactory {
     }
 
     /**
+     * Create an instance of {@link JAXBElement }{@code <}{@link NotificationCollection }{@code >}}
+     * 
+     */
+    @XmlElementDecl(namespace = "https://www.fsicatalog.com/services/orderprocessing/v4", name = "Notifications", scope = Reply.class)
+    public JAXBElement<NotificationCollection> createReplyNotifications(NotificationCollection value) {
+        return new JAXBElement<NotificationCollection>(_ReplyNotifications_QNAME, NotificationCollection.class, Reply.class, value);
+    }
+
+    /**
      * Create an instance of {@link JAXBElement }{@code <}{@link String }{@code >}}
      * 
      */
-    @XmlElementDecl(namespace = "https://www.fsicatalog.com/services/orderprocessing/v4", name = "Text", scope = OrderMessage.class)
-    public JAXBElement<String> createOrderMessageText(String value) {
-        return new JAXBElement<String>(_OrderMessageText_QNAME, String.class, OrderMessage.class, value);
+    @XmlElementDecl(namespace = "https://www.fsicatalog.com/services/orderprocessing/v4", name = "ConfirmationNumber", scope = Reply.class)
+    public JAXBElement<String> createReplyConfirmationNumber(String value) {
+        return new JAXBElement<String>(_ReplyConfirmationNumber_QNAME, String.class, Reply.class, value);
+    }
+
+    /**
+     * Create an instance of {@link JAXBElement }{@code <}{@link String }{@code >}}
+     * 
+     */
+    @XmlElementDecl(namespace = "https://www.fsicatalog.com/services/orderprocessing/v4", name = "ServiceStatus", scope = StatusResponse.class)
+    public JAXBElement<String> createStatusResponseServiceStatus(String value) {
+        return new JAXBElement<String>(_StatusResponseServiceStatus_QNAME, String.class, StatusResponse.class, value);
     }
 
     /**
@@ -768,6 +786,231 @@ public class ObjectFactory {
     @XmlElementDecl(namespace = "https://www.fsicatalog.com/services/orderprocessing/v4", name = "Status", scope = StatusRequest.class)
     public JAXBElement<ServiceStatusRequest> createStatusRequestStatus(ServiceStatusRequest value) {
         return new JAXBElement<ServiceStatusRequest>(_StatusRequestStatus_QNAME, ServiceStatusRequest.class, StatusRequest.class, value);
+    }
+
+    /**
+     * Create an instance of {@link JAXBElement }{@code <}{@link String }{@code >}}
+     * 
+     */
+    @XmlElementDecl(namespace = "https://www.fsicatalog.com/services/orderprocessing/v4", name = "OrderSourceName", scope = AdditionalOrderField.class)
+    public JAXBElement<String> createAdditionalOrderFieldOrderSourceName(String value) {
+        return new JAXBElement<String>(_AdditionalOrderFieldOrderSourceName_QNAME, String.class, AdditionalOrderField.class, value);
+    }
+
+    /**
+     * Create an instance of {@link JAXBElement }{@code <}{@link String }{@code >}}
+     * 
+     */
+    @XmlElementDecl(namespace = "https://www.fsicatalog.com/services/orderprocessing/v4", name = "Future5", scope = AdditionalOrderField.class)
+    public JAXBElement<String> createAdditionalOrderFieldFuture5(String value) {
+        return new JAXBElement<String>(_AdditionalOrderFieldFuture5_QNAME, String.class, AdditionalOrderField.class, value);
+    }
+
+    /**
+     * Create an instance of {@link JAXBElement }{@code <}{@link String }{@code >}}
+     * 
+     */
+    @XmlElementDecl(namespace = "https://www.fsicatalog.com/services/orderprocessing/v4", name = "Future10", scope = AdditionalOrderField.class)
+    public JAXBElement<String> createAdditionalOrderFieldFuture10(String value) {
+        return new JAXBElement<String>(_AdditionalOrderFieldFuture10_QNAME, String.class, AdditionalOrderField.class, value);
+    }
+
+    /**
+     * Create an instance of {@link JAXBElement }{@code <}{@link String }{@code >}}
+     * 
+     */
+    @XmlElementDecl(namespace = "https://www.fsicatalog.com/services/orderprocessing/v4", name = "Future6", scope = AdditionalOrderField.class)
+    public JAXBElement<String> createAdditionalOrderFieldFuture6(String value) {
+        return new JAXBElement<String>(_AdditionalOrderFieldFuture6_QNAME, String.class, AdditionalOrderField.class, value);
+    }
+
+    /**
+     * Create an instance of {@link JAXBElement }{@code <}{@link String }{@code >}}
+     * 
+     */
+    @XmlElementDecl(namespace = "https://www.fsicatalog.com/services/orderprocessing/v4", name = "Future3", scope = AdditionalOrderField.class)
+    public JAXBElement<String> createAdditionalOrderFieldFuture3(String value) {
+        return new JAXBElement<String>(_AdditionalOrderFieldFuture3_QNAME, String.class, AdditionalOrderField.class, value);
+    }
+
+    /**
+     * Create an instance of {@link JAXBElement }{@code <}{@link String }{@code >}}
+     * 
+     */
+    @XmlElementDecl(namespace = "https://www.fsicatalog.com/services/orderprocessing/v4", name = "Future4", scope = AdditionalOrderField.class)
+    public JAXBElement<String> createAdditionalOrderFieldFuture4(String value) {
+        return new JAXBElement<String>(_AdditionalOrderFieldFuture4_QNAME, String.class, AdditionalOrderField.class, value);
+    }
+
+    /**
+     * Create an instance of {@link JAXBElement }{@code <}{@link String }{@code >}}
+     * 
+     */
+    @XmlElementDecl(namespace = "https://www.fsicatalog.com/services/orderprocessing/v4", name = "Future9", scope = AdditionalOrderField.class)
+    public JAXBElement<String> createAdditionalOrderFieldFuture9(String value) {
+        return new JAXBElement<String>(_AdditionalOrderFieldFuture9_QNAME, String.class, AdditionalOrderField.class, value);
+    }
+
+    /**
+     * Create an instance of {@link JAXBElement }{@code <}{@link String }{@code >}}
+     * 
+     */
+    @XmlElementDecl(namespace = "https://www.fsicatalog.com/services/orderprocessing/v4", name = "Future7", scope = AdditionalOrderField.class)
+    public JAXBElement<String> createAdditionalOrderFieldFuture7(String value) {
+        return new JAXBElement<String>(_AdditionalOrderFieldFuture7_QNAME, String.class, AdditionalOrderField.class, value);
+    }
+
+    /**
+     * Create an instance of {@link JAXBElement }{@code <}{@link String }{@code >}}
+     * 
+     */
+    @XmlElementDecl(namespace = "https://www.fsicatalog.com/services/orderprocessing/v4", name = "Future8", scope = AdditionalOrderField.class)
+    public JAXBElement<String> createAdditionalOrderFieldFuture8(String value) {
+        return new JAXBElement<String>(_AdditionalOrderFieldFuture8_QNAME, String.class, AdditionalOrderField.class, value);
+    }
+
+    /**
+     * Create an instance of {@link JAXBElement }{@code <}{@link String }{@code >}}
+     * 
+     */
+    @XmlElementDecl(namespace = "https://www.fsicatalog.com/services/orderprocessing/v4", name = "OrderSourceCode", scope = AdditionalOrderField.class)
+    public JAXBElement<String> createAdditionalOrderFieldOrderSourceCode(String value) {
+        return new JAXBElement<String>(_AdditionalOrderFieldOrderSourceCode_QNAME, String.class, AdditionalOrderField.class, value);
+    }
+
+    /**
+     * Create an instance of {@link JAXBElement }{@code <}{@link String }{@code >}}
+     * 
+     */
+    @XmlElementDecl(namespace = "https://www.fsicatalog.com/services/orderprocessing/v4", name = "CurrentTerritoryCode", scope = AdditionalOrderField.class)
+    public JAXBElement<String> createAdditionalOrderFieldCurrentTerritoryCode(String value) {
+        return new JAXBElement<String>(_AdditionalOrderFieldCurrentTerritoryCode_QNAME, String.class, AdditionalOrderField.class, value);
+    }
+
+    /**
+     * Create an instance of {@link JAXBElement }{@code <}{@link String }{@code >}}
+     * 
+     */
+    @XmlElementDecl(namespace = "https://www.fsicatalog.com/services/orderprocessing/v4", name = "FixedTerritoryName", scope = AdditionalOrderField.class)
+    public JAXBElement<String> createAdditionalOrderFieldFixedTerritoryName(String value) {
+        return new JAXBElement<String>(_AdditionalOrderFieldFixedTerritoryName_QNAME, String.class, AdditionalOrderField.class, value);
+    }
+
+    /**
+     * Create an instance of {@link JAXBElement }{@code <}{@link String }{@code >}}
+     * 
+     */
+    @XmlElementDecl(namespace = "https://www.fsicatalog.com/services/orderprocessing/v4", name = "FixedTerritoryCode", scope = AdditionalOrderField.class)
+    public JAXBElement<String> createAdditionalOrderFieldFixedTerritoryCode(String value) {
+        return new JAXBElement<String>(_AdditionalOrderFieldFixedTerritoryCode_QNAME, String.class, AdditionalOrderField.class, value);
+    }
+
+    /**
+     * Create an instance of {@link JAXBElement }{@code <}{@link String }{@code >}}
+     * 
+     */
+    @XmlElementDecl(namespace = "https://www.fsicatalog.com/services/orderprocessing/v4", name = "CurrentTerritoryName", scope = AdditionalOrderField.class)
+    public JAXBElement<String> createAdditionalOrderFieldCurrentTerritoryName(String value) {
+        return new JAXBElement<String>(_AdditionalOrderFieldCurrentTerritoryName_QNAME, String.class, AdditionalOrderField.class, value);
+    }
+
+    /**
+     * Create an instance of {@link JAXBElement }{@code <}{@link String }{@code >}}
+     * 
+     */
+    @XmlElementDecl(namespace = "https://www.fsicatalog.com/services/orderprocessing/v4", name = "Future2", scope = AdditionalOrderField.class)
+    public JAXBElement<String> createAdditionalOrderFieldFuture2(String value) {
+        return new JAXBElement<String>(_AdditionalOrderFieldFuture2_QNAME, String.class, AdditionalOrderField.class, value);
+    }
+
+    /**
+     * Create an instance of {@link JAXBElement }{@code <}{@link String }{@code >}}
+     * 
+     */
+    @XmlElementDecl(namespace = "https://www.fsicatalog.com/services/orderprocessing/v4", name = "Future1", scope = AdditionalOrderField.class)
+    public JAXBElement<String> createAdditionalOrderFieldFuture1(String value) {
+        return new JAXBElement<String>(_AdditionalOrderFieldFuture1_QNAME, String.class, AdditionalOrderField.class, value);
+    }
+
+    /**
+     * Create an instance of {@link JAXBElement }{@code <}{@link String }{@code >}}
+     * 
+     */
+    @XmlElementDecl(namespace = "https://www.fsicatalog.com/services/orderprocessing/v4", name = "Color", scope = LineItem.class)
+    public JAXBElement<String> createLineItemColor(String value) {
+        return new JAXBElement<String>(_LineItemColor_QNAME, String.class, LineItem.class, value);
+    }
+
+    /**
+     * Create an instance of {@link JAXBElement }{@code <}{@link String }{@code >}}
+     * 
+     */
+    @XmlElementDecl(namespace = "https://www.fsicatalog.com/services/orderprocessing/v4", name = "Size", scope = LineItem.class)
+    public JAXBElement<String> createLineItemSize(String value) {
+        return new JAXBElement<String>(_LineItemSize_QNAME, String.class, LineItem.class, value);
+    }
+
+    /**
+     * Create an instance of {@link JAXBElement }{@code <}{@link String }{@code >}}
+     * 
+     */
+    @XmlElementDecl(namespace = "https://www.fsicatalog.com/services/orderprocessing/v4", name = "LineID", scope = LineItem.class)
+    public JAXBElement<String> createLineItemLineID(String value) {
+        return new JAXBElement<String>(_LineItemLineID_QNAME, String.class, LineItem.class, value);
+    }
+
+    /**
+     * Create an instance of {@link JAXBElement }{@code <}{@link String }{@code >}}
+     * 
+     */
+    @XmlElementDecl(namespace = "https://www.fsicatalog.com/services/orderprocessing/v4", name = "LineUDF1", scope = LineItem.class)
+    public JAXBElement<String> createLineItemLineUDF1(String value) {
+        return new JAXBElement<String>(_LineItemLineUDF1_QNAME, String.class, LineItem.class, value);
+    }
+
+    /**
+     * Create an instance of {@link JAXBElement }{@code <}{@link String }{@code >}}
+     * 
+     */
+    @XmlElementDecl(namespace = "https://www.fsicatalog.com/services/orderprocessing/v4", name = "ItemNumber", scope = LineItem.class)
+    public JAXBElement<String> createLineItemItemNumber(String value) {
+        return new JAXBElement<String>(_LineItemItemNumber_QNAME, String.class, LineItem.class, value);
+    }
+
+    /**
+     * Create an instance of {@link JAXBElement }{@code <}{@link String }{@code >}}
+     * 
+     */
+    @XmlElementDecl(namespace = "https://www.fsicatalog.com/services/orderprocessing/v4", name = "LineUDF2", scope = LineItem.class)
+    public JAXBElement<String> createLineItemLineUDF2(String value) {
+        return new JAXBElement<String>(_LineItemLineUDF2_QNAME, String.class, LineItem.class, value);
+    }
+
+    /**
+     * Create an instance of {@link JAXBElement }{@code <}{@link String }{@code >}}
+     * 
+     */
+    @XmlElementDecl(namespace = "https://www.fsicatalog.com/services/orderprocessing/v4", name = "LineUDF4", scope = LineItem.class)
+    public JAXBElement<String> createLineItemLineUDF4(String value) {
+        return new JAXBElement<String>(_LineItemLineUDF4_QNAME, String.class, LineItem.class, value);
+    }
+
+    /**
+     * Create an instance of {@link JAXBElement }{@code <}{@link String }{@code >}}
+     * 
+     */
+    @XmlElementDecl(namespace = "https://www.fsicatalog.com/services/orderprocessing/v4", name = "LineUDF3", scope = LineItem.class)
+    public JAXBElement<String> createLineItemLineUDF3(String value) {
+        return new JAXBElement<String>(_LineItemLineUDF3_QNAME, String.class, LineItem.class, value);
+    }
+
+    /**
+     * Create an instance of {@link JAXBElement }{@code <}{@link String }{@code >}}
+     * 
+     */
+    @XmlElementDecl(namespace = "https://www.fsicatalog.com/services/orderprocessing/v4", name = "LineUDF5", scope = LineItem.class)
+    public JAXBElement<String> createLineItemLineUDF5(String value) {
+        return new JAXBElement<String>(_LineItemLineUDF5_QNAME, String.class, LineItem.class, value);
     }
 
     /**
@@ -873,81 +1116,45 @@ public class ObjectFactory {
      * Create an instance of {@link JAXBElement }{@code <}{@link String }{@code >}}
      * 
      */
-    @XmlElementDecl(namespace = "https://www.fsicatalog.com/services/orderprocessing/v4", name = "Color", scope = LineItem.class)
-    public JAXBElement<String> createLineItemColor(String value) {
-        return new JAXBElement<String>(_LineItemColor_QNAME, String.class, LineItem.class, value);
+    @XmlElementDecl(namespace = "https://www.fsicatalog.com/services/orderprocessing/v4", name = "CC", scope = TechnicalContact.class)
+    public JAXBElement<String> createTechnicalContactCC(String value) {
+        return new JAXBElement<String>(_TechnicalContactCC_QNAME, String.class, TechnicalContact.class, value);
     }
 
     /**
      * Create an instance of {@link JAXBElement }{@code <}{@link String }{@code >}}
      * 
      */
-    @XmlElementDecl(namespace = "https://www.fsicatalog.com/services/orderprocessing/v4", name = "Size", scope = LineItem.class)
-    public JAXBElement<String> createLineItemSize(String value) {
-        return new JAXBElement<String>(_LineItemSize_QNAME, String.class, LineItem.class, value);
+    @XmlElementDecl(namespace = "https://www.fsicatalog.com/services/orderprocessing/v4", name = "EmailSubject", scope = TechnicalContact.class)
+    public JAXBElement<String> createTechnicalContactEmailSubject(String value) {
+        return new JAXBElement<String>(_TechnicalContactEmailSubject_QNAME, String.class, TechnicalContact.class, value);
     }
 
     /**
      * Create an instance of {@link JAXBElement }{@code <}{@link String }{@code >}}
      * 
      */
-    @XmlElementDecl(namespace = "https://www.fsicatalog.com/services/orderprocessing/v4", name = "LineID", scope = LineItem.class)
-    public JAXBElement<String> createLineItemLineID(String value) {
-        return new JAXBElement<String>(_LineItemLineID_QNAME, String.class, LineItem.class, value);
+    @XmlElementDecl(namespace = "https://www.fsicatalog.com/services/orderprocessing/v4", name = "Name", scope = TechnicalContact.class)
+    public JAXBElement<String> createTechnicalContactName(String value) {
+        return new JAXBElement<String>(_TechnicalContactName_QNAME, String.class, TechnicalContact.class, value);
     }
 
     /**
      * Create an instance of {@link JAXBElement }{@code <}{@link String }{@code >}}
      * 
      */
-    @XmlElementDecl(namespace = "https://www.fsicatalog.com/services/orderprocessing/v4", name = "LineUDF1", scope = LineItem.class)
-    public JAXBElement<String> createLineItemLineUDF1(String value) {
-        return new JAXBElement<String>(_LineItemLineUDF1_QNAME, String.class, LineItem.class, value);
+    @XmlElementDecl(namespace = "https://www.fsicatalog.com/services/orderprocessing/v4", name = "BCC", scope = TechnicalContact.class)
+    public JAXBElement<String> createTechnicalContactBCC(String value) {
+        return new JAXBElement<String>(_TechnicalContactBCC_QNAME, String.class, TechnicalContact.class, value);
     }
 
     /**
      * Create an instance of {@link JAXBElement }{@code <}{@link String }{@code >}}
      * 
      */
-    @XmlElementDecl(namespace = "https://www.fsicatalog.com/services/orderprocessing/v4", name = "ItemNumber", scope = LineItem.class)
-    public JAXBElement<String> createLineItemItemNumber(String value) {
-        return new JAXBElement<String>(_LineItemItemNumber_QNAME, String.class, LineItem.class, value);
-    }
-
-    /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link String }{@code >}}
-     * 
-     */
-    @XmlElementDecl(namespace = "https://www.fsicatalog.com/services/orderprocessing/v4", name = "LineUDF2", scope = LineItem.class)
-    public JAXBElement<String> createLineItemLineUDF2(String value) {
-        return new JAXBElement<String>(_LineItemLineUDF2_QNAME, String.class, LineItem.class, value);
-    }
-
-    /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link String }{@code >}}
-     * 
-     */
-    @XmlElementDecl(namespace = "https://www.fsicatalog.com/services/orderprocessing/v4", name = "LineUDF4", scope = LineItem.class)
-    public JAXBElement<String> createLineItemLineUDF4(String value) {
-        return new JAXBElement<String>(_LineItemLineUDF4_QNAME, String.class, LineItem.class, value);
-    }
-
-    /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link String }{@code >}}
-     * 
-     */
-    @XmlElementDecl(namespace = "https://www.fsicatalog.com/services/orderprocessing/v4", name = "LineUDF3", scope = LineItem.class)
-    public JAXBElement<String> createLineItemLineUDF3(String value) {
-        return new JAXBElement<String>(_LineItemLineUDF3_QNAME, String.class, LineItem.class, value);
-    }
-
-    /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link String }{@code >}}
-     * 
-     */
-    @XmlElementDecl(namespace = "https://www.fsicatalog.com/services/orderprocessing/v4", name = "LineUDF5", scope = LineItem.class)
-    public JAXBElement<String> createLineItemLineUDF5(String value) {
-        return new JAXBElement<String>(_LineItemLineUDF5_QNAME, String.class, LineItem.class, value);
+    @XmlElementDecl(namespace = "https://www.fsicatalog.com/services/orderprocessing/v4", name = "Phone", scope = TechnicalContact.class)
+    public JAXBElement<String> createTechnicalContactPhone(String value) {
+        return new JAXBElement<String>(_TechnicalContactPhone_QNAME, String.class, TechnicalContact.class, value);
     }
 
     /**
@@ -1131,6 +1338,15 @@ public class ObjectFactory {
     }
 
     /**
+     * Create an instance of {@link JAXBElement }{@code <}{@link Request }{@code >}}
+     * 
+     */
+    @XmlElementDecl(namespace = "https://www.fsicatalog.com/services/orderprocessing/v4", name = "Order", scope = OrderRequest.class)
+    public JAXBElement<Request> createOrderRequestOrder(Request value) {
+        return new JAXBElement<Request>(_OrderRequestOrder_QNAME, Request.class, OrderRequest.class, value);
+    }
+
+    /**
      * Create an instance of {@link JAXBElement }{@code <}{@link String }{@code >}}
      * 
      */
@@ -1199,7 +1415,7 @@ public class ObjectFactory {
      */
     @XmlElementDecl(namespace = "https://www.fsicatalog.com/services/orderprocessing/v4", name = "Name", scope = Address.class)
     public JAXBElement<String> createAddressName(String value) {
-        return new JAXBElement<String>(_AddressName_QNAME, String.class, Address.class, value);
+        return new JAXBElement<String>(_TechnicalContactName_QNAME, String.class, Address.class, value);
     }
 
     /**
@@ -1208,7 +1424,7 @@ public class ObjectFactory {
      */
     @XmlElementDecl(namespace = "https://www.fsicatalog.com/services/orderprocessing/v4", name = "Phone", scope = Address.class)
     public JAXBElement<String> createAddressPhone(String value) {
-        return new JAXBElement<String>(_AddressPhone_QNAME, String.class, Address.class, value);
+        return new JAXBElement<String>(_TechnicalContactPhone_QNAME, String.class, Address.class, value);
     }
 
     /**
@@ -1221,75 +1437,12 @@ public class ObjectFactory {
     }
 
     /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link NotificationCollection }{@code >}}
-     * 
-     */
-    @XmlElementDecl(namespace = "https://www.fsicatalog.com/services/orderprocessing/v4", name = "Notifications", scope = Reply.class)
-    public JAXBElement<NotificationCollection> createReplyNotifications(NotificationCollection value) {
-        return new JAXBElement<NotificationCollection>(_ReplyNotifications_QNAME, NotificationCollection.class, Reply.class, value);
-    }
-
-    /**
      * Create an instance of {@link JAXBElement }{@code <}{@link String }{@code >}}
      * 
      */
-    @XmlElementDecl(namespace = "https://www.fsicatalog.com/services/orderprocessing/v4", name = "ConfirmationNumber", scope = Reply.class)
-    public JAXBElement<String> createReplyConfirmationNumber(String value) {
-        return new JAXBElement<String>(_ReplyConfirmationNumber_QNAME, String.class, Reply.class, value);
-    }
-
-    /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link String }{@code >}}
-     * 
-     */
-    @XmlElementDecl(namespace = "https://www.fsicatalog.com/services/orderprocessing/v4", name = "CC", scope = TechnicalContact.class)
-    public JAXBElement<String> createTechnicalContactCC(String value) {
-        return new JAXBElement<String>(_TechnicalContactCC_QNAME, String.class, TechnicalContact.class, value);
-    }
-
-    /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link String }{@code >}}
-     * 
-     */
-    @XmlElementDecl(namespace = "https://www.fsicatalog.com/services/orderprocessing/v4", name = "EmailSubject", scope = TechnicalContact.class)
-    public JAXBElement<String> createTechnicalContactEmailSubject(String value) {
-        return new JAXBElement<String>(_TechnicalContactEmailSubject_QNAME, String.class, TechnicalContact.class, value);
-    }
-
-    /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link String }{@code >}}
-     * 
-     */
-    @XmlElementDecl(namespace = "https://www.fsicatalog.com/services/orderprocessing/v4", name = "Name", scope = TechnicalContact.class)
-    public JAXBElement<String> createTechnicalContactName(String value) {
-        return new JAXBElement<String>(_AddressName_QNAME, String.class, TechnicalContact.class, value);
-    }
-
-    /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link String }{@code >}}
-     * 
-     */
-    @XmlElementDecl(namespace = "https://www.fsicatalog.com/services/orderprocessing/v4", name = "BCC", scope = TechnicalContact.class)
-    public JAXBElement<String> createTechnicalContactBCC(String value) {
-        return new JAXBElement<String>(_TechnicalContactBCC_QNAME, String.class, TechnicalContact.class, value);
-    }
-
-    /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link String }{@code >}}
-     * 
-     */
-    @XmlElementDecl(namespace = "https://www.fsicatalog.com/services/orderprocessing/v4", name = "Phone", scope = TechnicalContact.class)
-    public JAXBElement<String> createTechnicalContactPhone(String value) {
-        return new JAXBElement<String>(_AddressPhone_QNAME, String.class, TechnicalContact.class, value);
-    }
-
-    /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link Reply }{@code >}}
-     * 
-     */
-    @XmlElementDecl(namespace = "https://www.fsicatalog.com/services/orderprocessing/v4", name = "Response", scope = OrderResponse.class)
-    public JAXBElement<Reply> createOrderResponseResponse(Reply value) {
-        return new JAXBElement<Reply>(_OrderResponseResponse_QNAME, Reply.class, OrderResponse.class, value);
+    @XmlElementDecl(namespace = "https://www.fsicatalog.com/services/orderprocessing/v4", name = "Message", scope = Notification.class)
+    public JAXBElement<String> createNotificationMessage(String value) {
+        return new JAXBElement<String>(_NotificationMessage_QNAME, String.class, Notification.class, value);
     }
 
     /**
@@ -1308,159 +1461,6 @@ public class ObjectFactory {
     @XmlElementDecl(namespace = "https://www.fsicatalog.com/services/orderprocessing/v4", name = "OwnerCode", scope = ServiceStatusRequest.class)
     public JAXBElement<String> createServiceStatusRequestOwnerCode(String value) {
         return new JAXBElement<String>(_RequestOwnerCode_QNAME, String.class, ServiceStatusRequest.class, value);
-    }
-
-    /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link String }{@code >}}
-     * 
-     */
-    @XmlElementDecl(namespace = "https://www.fsicatalog.com/services/orderprocessing/v4", name = "OrderSourceName", scope = AdditionalOrderField.class)
-    public JAXBElement<String> createAdditionalOrderFieldOrderSourceName(String value) {
-        return new JAXBElement<String>(_AdditionalOrderFieldOrderSourceName_QNAME, String.class, AdditionalOrderField.class, value);
-    }
-
-    /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link String }{@code >}}
-     * 
-     */
-    @XmlElementDecl(namespace = "https://www.fsicatalog.com/services/orderprocessing/v4", name = "Future5", scope = AdditionalOrderField.class)
-    public JAXBElement<String> createAdditionalOrderFieldFuture5(String value) {
-        return new JAXBElement<String>(_AdditionalOrderFieldFuture5_QNAME, String.class, AdditionalOrderField.class, value);
-    }
-
-    /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link String }{@code >}}
-     * 
-     */
-    @XmlElementDecl(namespace = "https://www.fsicatalog.com/services/orderprocessing/v4", name = "Future10", scope = AdditionalOrderField.class)
-    public JAXBElement<String> createAdditionalOrderFieldFuture10(String value) {
-        return new JAXBElement<String>(_AdditionalOrderFieldFuture10_QNAME, String.class, AdditionalOrderField.class, value);
-    }
-
-    /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link String }{@code >}}
-     * 
-     */
-    @XmlElementDecl(namespace = "https://www.fsicatalog.com/services/orderprocessing/v4", name = "Future6", scope = AdditionalOrderField.class)
-    public JAXBElement<String> createAdditionalOrderFieldFuture6(String value) {
-        return new JAXBElement<String>(_AdditionalOrderFieldFuture6_QNAME, String.class, AdditionalOrderField.class, value);
-    }
-
-    /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link String }{@code >}}
-     * 
-     */
-    @XmlElementDecl(namespace = "https://www.fsicatalog.com/services/orderprocessing/v4", name = "Future3", scope = AdditionalOrderField.class)
-    public JAXBElement<String> createAdditionalOrderFieldFuture3(String value) {
-        return new JAXBElement<String>(_AdditionalOrderFieldFuture3_QNAME, String.class, AdditionalOrderField.class, value);
-    }
-
-    /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link String }{@code >}}
-     * 
-     */
-    @XmlElementDecl(namespace = "https://www.fsicatalog.com/services/orderprocessing/v4", name = "Future4", scope = AdditionalOrderField.class)
-    public JAXBElement<String> createAdditionalOrderFieldFuture4(String value) {
-        return new JAXBElement<String>(_AdditionalOrderFieldFuture4_QNAME, String.class, AdditionalOrderField.class, value);
-    }
-
-    /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link String }{@code >}}
-     * 
-     */
-    @XmlElementDecl(namespace = "https://www.fsicatalog.com/services/orderprocessing/v4", name = "Future9", scope = AdditionalOrderField.class)
-    public JAXBElement<String> createAdditionalOrderFieldFuture9(String value) {
-        return new JAXBElement<String>(_AdditionalOrderFieldFuture9_QNAME, String.class, AdditionalOrderField.class, value);
-    }
-
-    /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link String }{@code >}}
-     * 
-     */
-    @XmlElementDecl(namespace = "https://www.fsicatalog.com/services/orderprocessing/v4", name = "Future7", scope = AdditionalOrderField.class)
-    public JAXBElement<String> createAdditionalOrderFieldFuture7(String value) {
-        return new JAXBElement<String>(_AdditionalOrderFieldFuture7_QNAME, String.class, AdditionalOrderField.class, value);
-    }
-
-    /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link String }{@code >}}
-     * 
-     */
-    @XmlElementDecl(namespace = "https://www.fsicatalog.com/services/orderprocessing/v4", name = "Future8", scope = AdditionalOrderField.class)
-    public JAXBElement<String> createAdditionalOrderFieldFuture8(String value) {
-        return new JAXBElement<String>(_AdditionalOrderFieldFuture8_QNAME, String.class, AdditionalOrderField.class, value);
-    }
-
-    /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link String }{@code >}}
-     * 
-     */
-    @XmlElementDecl(namespace = "https://www.fsicatalog.com/services/orderprocessing/v4", name = "OrderSourceCode", scope = AdditionalOrderField.class)
-    public JAXBElement<String> createAdditionalOrderFieldOrderSourceCode(String value) {
-        return new JAXBElement<String>(_AdditionalOrderFieldOrderSourceCode_QNAME, String.class, AdditionalOrderField.class, value);
-    }
-
-    /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link String }{@code >}}
-     * 
-     */
-    @XmlElementDecl(namespace = "https://www.fsicatalog.com/services/orderprocessing/v4", name = "CurrentTerritoryCode", scope = AdditionalOrderField.class)
-    public JAXBElement<String> createAdditionalOrderFieldCurrentTerritoryCode(String value) {
-        return new JAXBElement<String>(_AdditionalOrderFieldCurrentTerritoryCode_QNAME, String.class, AdditionalOrderField.class, value);
-    }
-
-    /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link String }{@code >}}
-     * 
-     */
-    @XmlElementDecl(namespace = "https://www.fsicatalog.com/services/orderprocessing/v4", name = "FixedTerritoryName", scope = AdditionalOrderField.class)
-    public JAXBElement<String> createAdditionalOrderFieldFixedTerritoryName(String value) {
-        return new JAXBElement<String>(_AdditionalOrderFieldFixedTerritoryName_QNAME, String.class, AdditionalOrderField.class, value);
-    }
-
-    /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link String }{@code >}}
-     * 
-     */
-    @XmlElementDecl(namespace = "https://www.fsicatalog.com/services/orderprocessing/v4", name = "FixedTerritoryCode", scope = AdditionalOrderField.class)
-    public JAXBElement<String> createAdditionalOrderFieldFixedTerritoryCode(String value) {
-        return new JAXBElement<String>(_AdditionalOrderFieldFixedTerritoryCode_QNAME, String.class, AdditionalOrderField.class, value);
-    }
-
-    /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link String }{@code >}}
-     * 
-     */
-    @XmlElementDecl(namespace = "https://www.fsicatalog.com/services/orderprocessing/v4", name = "CurrentTerritoryName", scope = AdditionalOrderField.class)
-    public JAXBElement<String> createAdditionalOrderFieldCurrentTerritoryName(String value) {
-        return new JAXBElement<String>(_AdditionalOrderFieldCurrentTerritoryName_QNAME, String.class, AdditionalOrderField.class, value);
-    }
-
-    /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link String }{@code >}}
-     * 
-     */
-    @XmlElementDecl(namespace = "https://www.fsicatalog.com/services/orderprocessing/v4", name = "Future2", scope = AdditionalOrderField.class)
-    public JAXBElement<String> createAdditionalOrderFieldFuture2(String value) {
-        return new JAXBElement<String>(_AdditionalOrderFieldFuture2_QNAME, String.class, AdditionalOrderField.class, value);
-    }
-
-    /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link String }{@code >}}
-     * 
-     */
-    @XmlElementDecl(namespace = "https://www.fsicatalog.com/services/orderprocessing/v4", name = "Future1", scope = AdditionalOrderField.class)
-    public JAXBElement<String> createAdditionalOrderFieldFuture1(String value) {
-        return new JAXBElement<String>(_AdditionalOrderFieldFuture1_QNAME, String.class, AdditionalOrderField.class, value);
-    }
-
-    /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link String }{@code >}}
-     * 
-     */
-    @XmlElementDecl(namespace = "https://www.fsicatalog.com/services/orderprocessing/v4", name = "ServiceStatus", scope = StatusResponse.class)
-    public JAXBElement<String> createStatusResponseServiceStatus(String value) {
-        return new JAXBElement<String>(_StatusResponseServiceStatus_QNAME, String.class, StatusResponse.class, value);
     }
 
     /**
@@ -1491,21 +1491,21 @@ public class ObjectFactory {
     }
 
     /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link Request }{@code >}}
-     * 
-     */
-    @XmlElementDecl(namespace = "https://www.fsicatalog.com/services/orderprocessing/v4", name = "Order", scope = OrderRequest.class)
-    public JAXBElement<Request> createOrderRequestOrder(Request value) {
-        return new JAXBElement<Request>(_OrderRequestOrder_QNAME, Request.class, OrderRequest.class, value);
-    }
-
-    /**
      * Create an instance of {@link JAXBElement }{@code <}{@link String }{@code >}}
      * 
      */
-    @XmlElementDecl(namespace = "https://www.fsicatalog.com/services/orderprocessing/v4", name = "Message", scope = Notification.class)
-    public JAXBElement<String> createNotificationMessage(String value) {
-        return new JAXBElement<String>(_NotificationMessage_QNAME, String.class, Notification.class, value);
+    @XmlElementDecl(namespace = "https://www.fsicatalog.com/services/orderprocessing/v4", name = "Text", scope = OrderMessage.class)
+    public JAXBElement<String> createOrderMessageText(String value) {
+        return new JAXBElement<String>(_OrderMessageText_QNAME, String.class, OrderMessage.class, value);
+    }
+
+    /**
+     * Create an instance of {@link JAXBElement }{@code <}{@link Reply }{@code >}}
+     * 
+     */
+    @XmlElementDecl(namespace = "https://www.fsicatalog.com/services/orderprocessing/v4", name = "Response", scope = OrderResponse.class)
+    public JAXBElement<Reply> createOrderResponseResponse(Reply value) {
+        return new JAXBElement<Reply>(_OrderResponseResponse_QNAME, Reply.class, OrderResponse.class, value);
     }
 
 }

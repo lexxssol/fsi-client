@@ -1,6 +1,7 @@
 
-package com.sheerimagination.businessobject.fulfillment.fsi.orders.api;
+package com.sheerimagination.businessobject.fulfillment.fsi.orderstatus.api;
 
+import java.net.MalformedURLException;
 import java.net.URL;
 import javax.xml.namespace.QName;
 import javax.xml.ws.Service;
@@ -16,7 +17,7 @@ import javax.xml.ws.WebServiceFeature;
  * Generated source version: 2.2
  * 
  */
-@WebServiceClient(name = "Orders", targetNamespace = "http://tempuri.org/", wsdlLocation = "file:fsi.orders.wsdl")
+@WebServiceClient(name = "Orders", targetNamespace = "http://tempuri.org/", wsdlLocation = "file:/D:/Work/Repos/fsi-client/wsdl/fsi.orders.wsdl")
 public class Orders
     extends Service
 {
@@ -26,11 +27,14 @@ public class Orders
     private final static QName ORDERS_QNAME = new QName("http://tempuri.org/", "Orders");
 
     static {
-        ORDERS_WSDL_LOCATION = com.sheerimagination.businessobject.fulfillment.fsi.orders.api.Orders.class.getResource("file:fsi.orders.wsdl");
+        URL url = null;
         WebServiceException e = null;
-        if (ORDERS_WSDL_LOCATION == null) {
-            e = new WebServiceException("Cannot find 'file:fsi.orders.wsdl' wsdl. Place the resource correctly in the classpath.");
+        try {
+            url = new URL("file:/D:/Work/Repos/fsi-client/wsdl/fsi.orders.wsdl");
+        } catch (MalformedURLException ex) {
+            e = new WebServiceException(ex);
         }
+        ORDERS_WSDL_LOCATION = url;
         ORDERS_EXCEPTION = e;
     }
 

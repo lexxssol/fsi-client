@@ -2,67 +2,65 @@ import javax.xml.ws.RespectBindingFeature;
 import javax.xml.ws.WebServiceFeature;
 import javax.xml.ws.soap.AddressingFeature;
 
-import com.sheerimagination.businessobject.fulfillment.fsi.orders.api.IOrdersContract;
-import com.sheerimagination.businessobject.fulfillment.fsi.orders.api.ObjectFactory;
-import com.sheerimagination.businessobject.fulfillment.fsi.orders.api.OrderRequest;
-import com.sheerimagination.businessobject.fulfillment.fsi.orders.api.Orders;
-import com.sheerimagination.businessobject.fulfillment.fsi.orders.api.Request;
-	
+import com.sheerimagination.businessobject.fulfillment.fsi.inventory.api.Inventory;
+import com.sheerimagination.businessobject.fulfillment.fsi.inventory.api.InventoryReply;
+import com.sheerimagination.businessobject.fulfillment.fsi.inventory.api.InventoryRequest;
+import com.sheerimagination.businessobject.fulfillment.fsi.inventory.api.InventorySoap;
+import com.sheerimagination.businessobject.fulfillment.fsi.orders.api.*;
+import com.sheerimagination.businessobject.fulfillment.fsi.orderstatus.api.OrderStatus;
+import com.sheerimagination.businessobject.fulfillment.fsi.orderstatus.api.OrderStatusContract;
+import com.sheerimagination.businessobject.fulfillment.fsi.orderstatus.api.OrderStatusReply;
+import com.sheerimagination.businessobject.fulfillment.fsi.orderstatus.api.OrderStatusRequest;
 
 public class FSIClient {
 
-	private final WebServiceFeature[] features = { new RespectBindingFeature(),
-			new AddressingFeature(true) };
-	private ObjectFactory factory = new ObjectFactory();
-
 	/**
-	 * Constructor
+	 * processOrder method
 	 */
-	public FSIClient() {
-		System.setProperty(
-				"com.sun.xml.ws.transport.http.client.HttpTransportPipe.dump",
-				"true");
-		System.setProperty(
-				"com.sun.xml.internal.ws.transport.http.client.HttpTransportPipe.dump",
-				"true");
-		System.setProperty("com.sun.xml.ws.transport.http.HttpAdapter.dump",
-				"true");
-		System.setProperty(
-				"com.sun.xml.internal.ws.transport.http.HttpAdapter.dump",
-				"true");
-	}
-
-	/**
-	 * execute method
-	 */
-	private void execute() {
-		ObjectFactory factory = new ObjectFactory();
+	public OrderResponse processOrder(OrderRequest orderRequest) {
 		IOrdersContract contract = getOrdersContract();
-		OrderRequest orerRequest = new OrderRequest();
-		Request request = new Request();
-		request.setAuthenticationKey(factory.createString("D29D22D7-0C87-4E55-8E0B-F4E5F0E0438C"));
-		request.setOwnerCode(factory.createString("VU"));
-		orerRequest.setOrder(factory.createRequest(request));
-		contract.processOrder(orerRequest);
-	}
-	
-	
-	protected IOrdersContract getOrdersContract() {
-		final WebServiceFeature[] features = { new RespectBindingFeature(),
-				new AddressingFeature(true) };
-
-		Orders service = new Orders();
-		IOrdersContract contract = service.getPort(IOrdersContract.class,
-				features);
-		return contract;
+		return contract.processOrder(orderRequest);
 	}
 
 	/**
-	 * main method
-	 * @param args
+	 * getOrderStatus method
 	 */
-	public static void main(String[] args) {
-		FSIClient client = new FSIClient();
-		client.execute();
+	public OrderStatusReply getOrderStatus(OrderStatusRequest statusRequest) {
+		OrderStatusContract contract = getOrderStatusContract();
+		return contract.getOrderStatus(statusRequest);
+	}
+
+	/**
+	 * inventoryInquiry method
+	 */
+	public InventoryReply inventoryInquiry(InventoryRequest inventoryRequest) {
+		InventorySoap contract = getInventoryContract();
+		return contract.inventoryInquiry(inventoryRequest);
+	}
+
+	/**
+	 * getServiceStatus method
+	 */
+	public StatusResponse getServiceStatus(StatusRequest statusRequest) {
+		IOrdersContract contract = getOrdersContract();
+		return contract.getServiceStatus(statusRequest);
+	}
+
+	private IOrdersContract getOrdersContract() {
+		Orders service = new Orders();
+		WebServiceFeature[] features = { new RespectBindingFeature(), new AddressingFeature(true) };
+		return service.getPort(IOrdersContract.class, features);
+	}
+
+	private OrderStatusContract getOrderStatusContract() {
+		OrderStatus service = new OrderStatus();
+		WebServiceFeature[] features = { new RespectBindingFeature(), new AddressingFeature(true) };
+		return service.getPort(OrderStatusContract.class, features);
+	}
+
+	private InventorySoap getInventoryContract() {
+		Inventory service = new Inventory();
+		WebServiceFeature[] features = { new RespectBindingFeature(), new AddressingFeature(true) };
+		return service.getPort(InventorySoap.class, features);
 	}
 }
